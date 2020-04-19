@@ -3,6 +3,15 @@
     <nuxt />
   </div>
 </template>
+<script>
+export default {
+  head () {
+    return {
+      titleTemplate: '%s - Shorting API'
+    }
+  }
+}
+</script>
 
 <style>
 @font-face {

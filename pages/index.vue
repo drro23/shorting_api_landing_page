@@ -1,28 +1,40 @@
 <template>
-  <div class="container">
-    <NavBar />
+  <div>
+    <div class="container">
+      <NavBar />
+      <HeaderView />
+    </div>
+    <div class="content">
+      <ShortenLink />
+    </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import NavBar from '~/components/NavBar.vue'
+import Logo from "~/components/Logo.vue";
+import NavBar from "~/components/NavBar.vue";
+import HeaderView from "~/components/HeaderView.vue";
+import ShortenLink from "~/components/ShortenLink.vue";
 
 export default {
   components: {
     Logo,
-    NavBar
+    NavBar,
+    HeaderView,
+    ShortenLink
   },
   head: {
-    titleTemplate: 'Shorting api landing page challenge',
-    meta: [
-      { charset: 'utf-8'}
-    ]
+    title: "Home",
+    meta: [{ charset: "utf-8" }]
   }
-}
+};
 </script>
 
 <style>
+.content {
+  width: 100%;
+  background-color: hsl(257, 7%, 63%);
+}
 .container {
   width: 80%;
   margin: 0 auto;
